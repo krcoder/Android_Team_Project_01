@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by icecloud-dcp (http://jsbin.com/tisetat/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+var Array = new Array(["Red", "Yellow", "Green"], ["Table", "Chair", "Fan", "Bulb", "TV"],
+                       ["JAVA", "C#", "CSS", "HTML", ".NET"]);
+document.write(Array[0][0]+"<br />");
+document.write(Array[1]+"<br />");
+document.write(Array[2]+"<br />");
+
+var Mutltivalues = {name:"DC Park", address:"133 Ojung-dong", position:"student"};
+document.write(Mutltivalues["name"]+"<br />");
+document.write(Mutltivalues["address"]+"<br />");
+
+var phrase = "This is a simple phrase";
+var position = phrase.indexOf("simple"); //
+                              
+document.write(position +"<br />");      
+
+var today = new Date(); // 현재 날자와 시간
+//year, month, day
+var y2k = new Date(2016, 0, 1);
+//year, month, day, hours, minutes, seconds
+var y2k = new Date(2016,0,1,0,0,0);
+document.write(y2k + "<br />");
+
+//2개의 객체 생성 예제
+var player1 = {name:"홍길동", score:1000, rank:1};
+var player2 = {name:"박새롬", score:10000, rank:5};
+
+function playerDetails() {
+  //각 플레이어에 대한 상세 정보 display
+  document.write(this.name +" has a rank of " + this.rank + " <br />");
+}
+
+ function playerScores() {
+        
+    }
+player1.logDetails = playerDetails; //함수 호출이 아니라 함수 연결(association)
+player2.logDetails = playerDetails; //함수 호출이 아니라 함수 연결(association)
+
+player1.logDetails(); //함수 호출 시 ()사용
+
+player2.logDetails(); //함수 호출 시 ()사용
+
+</script>
+</body>
+</html>
